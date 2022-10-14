@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019-2020 The LineageOS Project
+ * Copyright (C) 2022 The Portal Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,9 +15,9 @@
  */
 
 #ifdef LIVES_IN_SYSTEM
-#define LOG_TAG "lineage.livedisplay@2.0-service-sysfs"
+#define LOG_TAG "portalrom.livedisplay@2.0-service-sysfs"
 #else
-#define LOG_TAG "vendor.lineage.livedisplay@2.0-service-sysfs"
+#define LOG_TAG "vendor.portalrom.livedisplay@2.0-service-sysfs"
 #endif
 
 #include <android-base/logging.h>
@@ -33,12 +33,12 @@ using ::android::status_t;
 using ::android::hardware::configureRpcThreadpool;
 using ::android::hardware::joinRpcThreadpool;
 
-using ::vendor::lineage::livedisplay::V2_0::sysfs::AdaptiveBacklight;
-using ::vendor::lineage::livedisplay::V2_0::sysfs::AutoContrast;
-using ::vendor::lineage::livedisplay::V2_0::sysfs::ColorEnhancement;
-using ::vendor::lineage::livedisplay::V2_0::sysfs::DisplayColorCalibration;
-using ::vendor::lineage::livedisplay::V2_0::sysfs::ReadingEnhancement;
-using ::vendor::lineage::livedisplay::V2_0::sysfs::SunlightEnhancement;
+using ::vendor::portalrom::livedisplay::V2_0::sysfs::AdaptiveBacklight;
+using ::vendor::portalrom::livedisplay::V2_0::sysfs::AutoContrast;
+using ::vendor::portalrom::livedisplay::V2_0::sysfs::ColorEnhancement;
+using ::vendor::portalrom::livedisplay::V2_0::sysfs::DisplayColorCalibration;
+using ::vendor::portalrom::livedisplay::V2_0::sysfs::ReadingEnhancement;
+using ::vendor::portalrom::livedisplay::V2_0::sysfs::SunlightEnhancement;
 
 status_t RegisterAsServices() {
     status_t status = OK;

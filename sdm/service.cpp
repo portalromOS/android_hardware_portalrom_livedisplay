@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019-2021 The LineageOS Project
+ * Copyright (C) 2022 The Portal Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,9 +15,9 @@
  */
 
 #ifdef LIVES_IN_SYSTEM
-#define LOG_TAG "lineage.livedisplay@2.0-service-sdm"
+#define LOG_TAG "portalrom.livedisplay@2.0-service-sdm"
 #else
-#define LOG_TAG "vendor.lineage.livedisplay@2.0-service-sdm"
+#define LOG_TAG "vendor.portalrom.livedisplay@2.0-service-sdm"
 #endif
 
 #include <android-base/logging.h>
@@ -33,9 +33,9 @@ using ::android::status_t;
 using ::android::hardware::configureRpcThreadpool;
 using ::android::hardware::joinRpcThreadpool;
 
-using ::vendor::lineage::livedisplay::V2_0::sdm::DisplayModes;
-using ::vendor::lineage::livedisplay::V2_0::sdm::PictureAdjustment;
-using ::vendor::lineage::livedisplay::V2_0::sdm::SDMController;
+using ::vendor::portalrom::livedisplay::V2_0::sdm::DisplayModes;
+using ::vendor::portalrom::livedisplay::V2_0::sdm::PictureAdjustment;
+using ::vendor::portalrom::livedisplay::V2_0::sdm::SDMController;
 
 status_t RegisterAsServices() {
     status_t status = OK;

@@ -1,4 +1,4 @@
-// Copyright (C) 2019-2021 The LineageOS Project
+// Copyright (C) 2022 The Portal Project
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -13,28 +13,28 @@
 // limitations under the License.
 
 filegroup {
-    name: "vendor.lineage.livedisplay@2.0-sysfs-ab",
+    name: "vendor.portalrom.livedisplay@2.0-sysfs-ab",
     srcs: [
         "AdaptiveBacklight.cpp",
     ],
 }
 
 filegroup {
-    name: "vendor.lineage.livedisplay@2.0-sysfs-dcc",
+    name: "vendor.portalrom.livedisplay@2.0-sysfs-dcc",
     srcs: [
         "DisplayColorCalibration.cpp",
     ],
 }
 
 filegroup {
-    name: "vendor.lineage.livedisplay@2.0-sysfs-sre",
+    name: "vendor.portalrom.livedisplay@2.0-sysfs-sre",
     srcs: [
         "SunlightEnhancement.cpp",
     ],
 }
 
 cc_library_headers {
-    name: "vendor.lineage.livedisplay@2.0-sysfs-headers",
+    name: "vendor.portalrom.livedisplay@2.0-sysfs-headers",
     vendor_available: true,
     export_include_dirs: ["include"],
 }
@@ -44,9 +44,9 @@ cc_defaults {
     defaults: ["hidl_defaults"],
     relative_install_path: "hw",
     srcs: [
-        ":vendor.lineage.livedisplay@2.0-sysfs-ab",
-        ":vendor.lineage.livedisplay@2.0-sysfs-dcc",
-        ":vendor.lineage.livedisplay@2.0-sysfs-sre",
+        ":vendor.portalrom.livedisplay@2.0-sysfs-ab",
+        ":vendor.portalrom.livedisplay@2.0-sysfs-dcc",
+        ":vendor.portalrom.livedisplay@2.0-sysfs-sre",
         "service.cpp",
     ],
     shared_libs: [
@@ -54,23 +54,23 @@ cc_defaults {
         "libbinder",
         "libhidlbase",
         "libutils",
-        "vendor.lineage.livedisplay@2.0",
+        "vendor.portalrom.livedisplay@2.0",
     ],
     header_libs: [
-        "vendor.lineage.livedisplay@2.0-sysfs-headers",
+        "vendor.portalrom.livedisplay@2.0-sysfs-headers",
     ],
 }
 
 cc_binary {
-    name: "lineage.livedisplay@2.0-service-sysfs",
-    init_rc: ["lineage.livedisplay@2.0-service-sysfs.rc"],
+    name: "portalrom.livedisplay@2.0-service-sysfs",
+    init_rc: ["portalrom.livedisplay@2.0-service-sysfs.rc"],
     defaults: ["livedisplay_sysfs_defaults"],
     cflags: ["-DLIVES_IN_SYSTEM"],
 }
 
 cc_binary {
-    name: "vendor.lineage.livedisplay@2.0-service-sysfs",
-    init_rc: ["vendor.lineage.livedisplay@2.0-service-sysfs.rc"],
+    name: "vendor.portalrom.livedisplay@2.0-service-sysfs",
+    init_rc: ["vendor.portalrom.livedisplay@2.0-service-sysfs.rc"],
     defaults: ["livedisplay_sysfs_defaults"],
     vendor: true,
 }

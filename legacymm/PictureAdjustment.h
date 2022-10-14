@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 The LineageOS Project
+ * Copyright (C) 2022 The Portal Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-#ifndef VENDOR_LINEAGE_LIVEDISPLAY_V2_0_PICTUREADJUSTMENT_H
-#define VENDOR_LINEAGE_LIVEDISPLAY_V2_0_PICTUREADJUSTMENT_H
+#ifndef VENDOR_PORTALROM_LIVEDISPLAY_V2_0_PICTUREADJUSTMENT_H
+#define VENDOR_PORTALROM_LIVEDISPLAY_V2_0_PICTUREADJUSTMENT_H
 
-#include <vendor/lineage/livedisplay/2.0/IPictureAdjustment.h>
+#include <vendor/portalrom/livedisplay/2.0/IPictureAdjustment.h>
 
 namespace vendor {
-namespace lineage {
+namespace portalrom {
 namespace livedisplay {
 namespace V2_0 {
 namespace legacymm {
@@ -35,7 +35,7 @@ class PictureAdjustment : public IPictureAdjustment {
 
     bool isSupported();
 
-    // Methods from ::vendor::lineage::livedisplay::V2_0::IPictureAdjustment
+    // Methods from ::vendor::portalrom::livedisplay::V2_0::IPictureAdjustment
     // follow.
     Return<void> getHueRange(getHueRange_cb _hidl_cb) override;
     Return<void> getSaturationRange(getSaturationRange_cb _hidl_cb) override;
@@ -45,7 +45,7 @@ class PictureAdjustment : public IPictureAdjustment {
     Return<void> getPictureAdjustment(getPictureAdjustment_cb _hidl_cb) override;
     Return<void> getDefaultPictureAdjustment(getDefaultPictureAdjustment_cb _hidl_cb) override;
     Return<bool> setPictureAdjustment(
-            const ::vendor::lineage::livedisplay::V2_0::HSIC& hsic) override;
+            const ::vendor::portalrom::livedisplay::V2_0::HSIC& hsic) override;
 
     static void updateDefaultPictureAdjustment();
 
@@ -65,7 +65,7 @@ class PictureAdjustment : public IPictureAdjustment {
 }  // namespace legacymm
 }  // namespace V2_0
 }  // namespace livedisplay
-}  // namespace lineage
+}  // namespace portalrom
 }  // namespace vendor
 
-#endif  // VENDOR_LINEAGE_LIVEDISPLAY_V2_0_PICTUREADJUSTMENT_H
+#endif  // VENDOR_PORTALROM_LIVEDISPLAY_V2_0_PICTUREADJUSTMENT_H

@@ -1,4 +1,4 @@
-// Copyright (C) 2019-2021 The LineageOS Project
+// Copyright (C) 2022 The Portal Project
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -13,21 +13,21 @@
 // limitations under the License.
 
 filegroup {
-    name: "vendor.lineage.livedisplay@2.0-sdm-dm",
+    name: "vendor.portalrom.livedisplay@2.0-sdm-dm",
     srcs: [
         "DisplayModes.cpp",
     ],
 }
 
 filegroup {
-    name: "vendor.lineage.livedisplay@2.0-sdm-pa",
+    name: "vendor.portalrom.livedisplay@2.0-sdm-pa",
     srcs: [
         "PictureAdjustment.cpp",
     ],
 }
 
 filegroup {
-    name: "vendor.lineage.livedisplay@2.0-sdm-utils",
+    name: "vendor.portalrom.livedisplay@2.0-sdm-utils",
     srcs: [
         "SDMController.cpp",
         "Utils.cpp",
@@ -35,7 +35,7 @@ filegroup {
 }
 
 cc_library_headers {
-    name: "vendor.lineage.livedisplay@2.0-sdm-headers",
+    name: "vendor.portalrom.livedisplay@2.0-sdm-headers",
     vendor_available: true,
     export_include_dirs: ["include"],
 }
@@ -45,9 +45,9 @@ cc_defaults {
     defaults: ["hidl_defaults"],
     relative_install_path: "hw",
     srcs: [
-        ":vendor.lineage.livedisplay@2.0-sdm-dm",
-        ":vendor.lineage.livedisplay@2.0-sdm-pa",
-        ":vendor.lineage.livedisplay@2.0-sdm-utils",
+        ":vendor.portalrom.livedisplay@2.0-sdm-dm",
+        ":vendor.portalrom.livedisplay@2.0-sdm-pa",
+        ":vendor.portalrom.livedisplay@2.0-sdm-utils",
         "service.cpp",
     ],
     shared_libs: [
@@ -56,23 +56,23 @@ cc_defaults {
         "libdl",
         "libhidlbase",
         "libutils",
-        "vendor.lineage.livedisplay@2.0",
+        "vendor.portalrom.livedisplay@2.0",
     ],
     header_libs: [
-        "vendor.lineage.livedisplay@2.0-sdm-headers",
+        "vendor.portalrom.livedisplay@2.0-sdm-headers",
     ],
 }
 
 cc_binary {
-    name: "lineage.livedisplay@2.0-service-sdm",
-    init_rc: ["lineage.livedisplay@2.0-service-sdm.rc"],
+    name: "portalrom.livedisplay@2.0-service-sdm",
+    init_rc: ["portalrom.livedisplay@2.0-service-sdm.rc"],
     defaults: ["livedisplay_sdm_defaults"],
     cflags: ["-DLIVES_IN_SYSTEM"],
 }
 
 cc_binary {
-    name: "vendor.lineage.livedisplay@2.0-service-sdm",
-    init_rc: ["vendor.lineage.livedisplay@2.0-service-sdm.rc"],
+    name: "vendor.portalrom.livedisplay@2.0-service-sdm",
+    init_rc: ["vendor.portalrom.livedisplay@2.0-service-sdm.rc"],
     defaults: ["livedisplay_sdm_defaults"],
     vendor: true,
 }

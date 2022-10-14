@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019-2020 The LineageOS Project
+ * Copyright (C) 2022 The Portal Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,12 +18,12 @@
 
 #include <android-base/file.h>
 #include <android-base/strings.h>
-#include <vendor/lineage/livedisplay/2.0/IAutoContrast.h>
-#include <vendor/lineage/livedisplay/2.0/IColorEnhancement.h>
-#include <vendor/lineage/livedisplay/2.0/IReadingEnhancement.h>
+#include <vendor/portalrom/livedisplay/2.0/IAutoContrast.h>
+#include <vendor/portalrom/livedisplay/2.0/IColorEnhancement.h>
+#include <vendor/portalrom/livedisplay/2.0/IReadingEnhancement.h>
 
 namespace vendor {
-namespace lineage {
+namespace portalrom {
 namespace livedisplay {
 namespace V2_0 {
 namespace sysfs {
@@ -45,7 +45,7 @@ class SimpleMode : public T {
         return !access(SimpleModeTrait<T>::kNode, R_OK | W_OK);
     }
 
-    // Methods from ::vendor::lineage::livedisplay::V2_0::I* follow.
+    // Methods from ::vendor::portalrom::livedisplay::V2_0::I* follow.
     Return<bool> isEnabled() override {
         std::string tmp;
         int32_t contents = 0;
@@ -83,5 +83,5 @@ using ReadingEnhancement = SimpleMode<IReadingEnhancement>;
 }  // namespace sysfs
 }  // namespace V2_0
 }  // namespace livedisplay
-}  // namespace lineage
+}  // namespace portalrom
 }  // namespace vendor

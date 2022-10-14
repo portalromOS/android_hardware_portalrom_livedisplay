@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 The LineageOS Project
+ * Copyright (C) 2019 The Portal Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,7 +22,7 @@
 #include "Types.h"
 
 namespace vendor {
-namespace lineage {
+namespace portalrom {
 namespace livedisplay {
 namespace V2_0 {
 namespace legacymm {
@@ -82,7 +82,7 @@ void PictureAdjustment::updateDefaultPictureAdjustment() {
     }
 }
 
-// Methods from ::vendor::lineage::livedisplay::V2_0::IPictureAdjustment follow.
+// Methods from ::vendor::portalrom::livedisplay::V2_0::IPictureAdjustment follow.
 Return<void> PictureAdjustment::getHueRange(getHueRange_cb _hidl_cb) {
     FloatRange range{};
     mm_pa_range r{};
@@ -176,7 +176,7 @@ Return<void> PictureAdjustment::getDefaultPictureAdjustment(
 }
 
 Return<bool> PictureAdjustment::setPictureAdjustment(
-        const ::vendor::lineage::livedisplay::V2_0::HSIC& hsic) {
+        const ::vendor::portalrom::livedisplay::V2_0::HSIC& hsic) {
     mm_pa_config config = {0xF,
                            {static_cast<int>(hsic.hue), static_cast<int>(hsic.saturation),
                             static_cast<int>(hsic.intensity), static_cast<int>(hsic.contrast),
@@ -192,5 +192,5 @@ Return<bool> PictureAdjustment::setPictureAdjustment(
 }  // namespace legacymm
 }  // namespace V2_0
 }  // namespace livedisplay
-}  // namespace lineage
+}  // namespace portalrom
 }  // namespace vendor

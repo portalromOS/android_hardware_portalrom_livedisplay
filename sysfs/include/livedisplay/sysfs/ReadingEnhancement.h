@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019-2020 The LineageOS Project
+ * Copyright (C) 2022 The Portal Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,10 +16,10 @@
 
 #pragma once
 
-#include <vendor/lineage/livedisplay/2.0/IReadingEnhancement.h>
+#include <vendor/portalrom/livedisplay/2.0/IReadingEnhancement.h>
 
 namespace vendor {
-namespace lineage {
+namespace portalrom {
 namespace livedisplay {
 namespace V2_0 {
 namespace sysfs {
@@ -30,7 +30,7 @@ class ReadingEnhancement : public IReadingEnhancement {
   public:
     static bool isSupported();
 
-    // Methods from ::vendor::lineage::livedisplay::V2_0::IReadingEnhancement follow.
+    // Methods from ::vendor::portalrom::livedisplay::V2_0::IReadingEnhancement follow.
     Return<bool> isEnabled() override;
     Return<bool> setEnabled(bool enabled) override;
 };
@@ -38,5 +38,5 @@ class ReadingEnhancement : public IReadingEnhancement {
 }  // namespace sysfs
 }  // namespace V2_0
 }  // namespace livedisplay
-}  // namespace lineage
+}  // namespace portalrom
 }  // namespace vendor

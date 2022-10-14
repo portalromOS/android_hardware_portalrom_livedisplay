@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019-2020 The LineageOS Project
+ * Copyright (C) 2022 The Portal Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,10 +16,10 @@
 
 #pragma once
 
-#include <vendor/lineage/livedisplay/2.0/IDisplayColorCalibration.h>
+#include <vendor/portalrom/livedisplay/2.0/IDisplayColorCalibration.h>
 
 namespace vendor {
-namespace lineage {
+namespace portalrom {
 namespace livedisplay {
 namespace V2_0 {
 namespace sysfs {
@@ -31,7 +31,7 @@ class DisplayColorCalibration : public IDisplayColorCalibration {
   public:
     static bool isSupported();
 
-    // Methods from ::vendor::lineage::livedisplay::V2_0::IDisplayColorCalibration follow.
+    // Methods from ::vendor::portalrom::livedisplay::V2_0::IDisplayColorCalibration follow.
     Return<int32_t> getMaxValue() override;
     Return<int32_t> getMinValue() override;
     Return<void> getCalibration(getCalibration_cb _hidl_cb) override;
@@ -41,5 +41,5 @@ class DisplayColorCalibration : public IDisplayColorCalibration {
 }  // namespace sysfs
 }  // namespace V2_0
 }  // namespace livedisplay
-}  // namespace lineage
+}  // namespace portalrom
 }  // namespace vendor

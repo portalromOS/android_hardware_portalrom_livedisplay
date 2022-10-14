@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 The LineageOS Project
+ * Copyright (C) 2022 The Portal Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,7 +16,7 @@
 
 #include <dlfcn.h>
 
-#define LOG_TAG "vendor.lineage.livedisplay@2.0-service-legacymm"
+#define LOG_TAG "vendor.portalrom.livedisplay@2.0-service-legacymm"
 
 #include <android-base/logging.h>
 #include <binder/ProcessState.h>
@@ -33,10 +33,10 @@ using android::status_t;
 using android::hardware::configureRpcThreadpool;
 using android::hardware::joinRpcThreadpool;
 
-using ::vendor::lineage::livedisplay::V2_0::IDisplayModes;
-using ::vendor::lineage::livedisplay::V2_0::IPictureAdjustment;
-using ::vendor::lineage::livedisplay::V2_0::legacymm::DisplayModes;
-using ::vendor::lineage::livedisplay::V2_0::legacymm::PictureAdjustment;
+using ::vendor::portalrom::livedisplay::V2_0::IDisplayModes;
+using ::vendor::portalrom::livedisplay::V2_0::IPictureAdjustment;
+using ::vendor::portalrom::livedisplay::V2_0::legacymm::DisplayModes;
+using ::vendor::portalrom::livedisplay::V2_0::legacymm::PictureAdjustment;
 
 int main() {
     // Vendor backend

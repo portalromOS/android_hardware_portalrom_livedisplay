@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019-2021 The LineageOS Project
+ * Copyright (C) 2022 The Portal Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -29,7 +29,7 @@ constexpr const char* kFileCabc = "/sys/class/graphics/fb0/cabc";
 }  // anonymous namespace
 
 namespace vendor {
-namespace lineage {
+namespace portalrom {
 namespace livedisplay {
 namespace V2_0 {
 namespace sysfs {
@@ -48,7 +48,7 @@ bool AdaptiveBacklight::isSupported() {
     return file_ != nullptr;
 }
 
-// Methods from ::vendor::lineage::livedisplay::V2_0::IAdaptiveBacklight follow.
+// Methods from ::vendor::portalrom::livedisplay::V2_0::IAdaptiveBacklight follow.
 Return<bool> AdaptiveBacklight::isEnabled() {
     std::string tmp;
     int32_t contents = 0;
@@ -67,5 +67,5 @@ Return<bool> AdaptiveBacklight::setEnabled(bool enabled) {
 }  // namespace sysfs
 }  // namespace V2_0
 }  // namespace livedisplay
-}  // namespace lineage
+}  // namespace portalrom
 }  // namespace vendor

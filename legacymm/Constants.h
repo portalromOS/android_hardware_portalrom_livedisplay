@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 The LineageOS Project
+ * Copyright (C) 2022 The Portal Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-#ifndef VENDOR_LINEAGE_LIVEDISPLAY_V2_0_LEGACYMM_CONSTANTS_H
-#define VENDOR_LINEAGE_LIVEDISPLAY_V2_0_LEGACYMM_CONSTANTS_H
+#ifndef VENDOR_PORTALROM_LIVEDISPLAY_V2_0_LEGACYMM_CONSTANTS_H
+#define VENDOR_PORTALROM_LIVEDISPLAY_V2_0_LEGACYMM_CONSTANTS_H
 
 namespace vendor {
-namespace lineage {
+namespace portalrom {
 namespace livedisplay {
 namespace V2_0 {
 namespace legacymm {
@@ -30,7 +30,7 @@ namespace legacymm {
 }  // namespace legacymm
 }  // namespace V2_0
 }  // namespace livedisplay
-}  // namespace lineage
+}  // namespace portalrom
 }  // namespace vendor
 
-#endif  // VENDOR_LINEAGE_LIVEDISPLAY_V2_0_LEGACYMM_CONSTANTS_H
+#endif  // VENDOR_PORTALROM_LIVEDISPLAY_V2_0_LEGACYMM_CONSTANTS_H

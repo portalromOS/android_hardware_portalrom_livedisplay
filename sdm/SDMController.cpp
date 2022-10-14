@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018-2020 The LineageOS Project
+ * Copyright (C) 2022 The Portal Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,9 +15,9 @@
  */
 
 #ifdef LIVES_IN_SYSTEM
-#define LOG_TAG "lineage.livedisplay@2.0-impl-sdm"
+#define LOG_TAG "portalrom.livedisplay@2.0-impl-sdm"
 #else
-#define LOG_TAG "vendor.lineage.livedisplay@2.0-impl-sdm"
+#define LOG_TAG "vendor.portalrom.livedisplay@2.0-impl-sdm"
 #endif
 
 #include "livedisplay/sdm/SDMController.h"
@@ -94,7 +94,7 @@ Function LoadFunction(void* handle, const char* name) {
 }  // anonymous namespace
 
 namespace vendor {
-namespace lineage {
+namespace portalrom {
 namespace livedisplay {
 namespace V2_0 {
 namespace sdm {
@@ -185,5 +185,5 @@ status_t SDMController::getFeatureVersion(uint32_t feature_id, SdmFeatureVersion
 }  // namespace sdm
 }  // namespace V2_0
 }  // namespace livedisplay
-}  // namespace lineage
+}  // namespace portalrom
 }  // namespace vendor

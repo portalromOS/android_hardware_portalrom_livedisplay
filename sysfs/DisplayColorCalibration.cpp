@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019-2020 The LineageOS Project
+ * Copyright (C) 2022 The Portal Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,9 +15,9 @@
  */
 
 #ifdef LIVES_IN_SYSTEM
-#define LOG_TAG "lineage.livedisplay@2.0-impl-sysfs"
+#define LOG_TAG "portalrom.livedisplay@2.0-impl-sysfs"
 #else
-#define LOG_TAG "vendor.lineage.livedisplay@2.0-impl-sysfs"
+#define LOG_TAG "vendor.portalrom.livedisplay@2.0-impl-sysfs"
 #endif
 
 #include "livedisplay/sysfs/DisplayColorCalibration.h"
@@ -39,7 +39,7 @@ using ::android::base::WriteStringToFile;
 using ::android::hardware::Void;
 
 namespace vendor {
-namespace lineage {
+namespace portalrom {
 namespace livedisplay {
 namespace V2_0 {
 namespace sysfs {
@@ -48,7 +48,7 @@ bool DisplayColorCalibration::isSupported() {
     return !access(kFileRgb, R_OK | W_OK);
 }
 
-// Methods from ::vendor::lineage::livedisplay::V2_0::IDisplayColorCalibration follow.
+// Methods from ::vendor::portalrom::livedisplay::V2_0::IDisplayColorCalibration follow.
 Return<int32_t> DisplayColorCalibration::getMaxValue() {
     return 32768;
 }
@@ -83,5 +83,5 @@ Return<bool> DisplayColorCalibration::setCalibration(const hidl_vec<int32_t>& rg
 }  // namespace sysfs
 }  // namespace V2_0
 }  // namespace livedisplay
-}  // namespace lineage
+}  // namespace portalrom
 }  // namespace vendor

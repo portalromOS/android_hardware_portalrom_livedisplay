@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019-2020 The LineageOS Project
+ * Copyright (C) 2022 The Portal Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,12 +17,12 @@
 #pragma once
 
 #include <android-base/macros.h>
-#include <vendor/lineage/livedisplay/2.0/IDisplayModes.h>
+#include <vendor/portalrom/livedisplay/2.0/IDisplayModes.h>
 
 #include "SDMController.h"
 
 namespace vendor {
-namespace lineage {
+namespace portalrom {
 namespace livedisplay {
 namespace V2_0 {
 namespace sdm {
@@ -38,7 +38,7 @@ class DisplayModes : public IDisplayModes {
     using DisplayModeSetCallback = std::function<void()>;
     virtual void registerDisplayModeSetCallback(DisplayModeSetCallback callback);
 
-    // Methods from ::vendor::lineage::livedisplay::V2_0::IDisplayModes follow.
+    // Methods from ::vendor::portalrom::livedisplay::V2_0::IDisplayModes follow.
     Return<void> getDisplayModes(getDisplayModes_cb _hidl_cb) override;
     Return<void> getCurrentDisplayMode(getCurrentDisplayMode_cb _hidl_cb) override;
     Return<void> getDefaultDisplayMode(getDefaultDisplayMode_cb _hidl_cb) override;
@@ -61,5 +61,5 @@ class DisplayModes : public IDisplayModes {
 }  // namespace sdm
 }  // namespace V2_0
 }  // namespace livedisplay
-}  // namespace lineage
+}  // namespace portalrom
 }  // namespace vendor

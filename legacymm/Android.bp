@@ -1,4 +1,4 @@
-// Copyright (C) 2019-2020 The LineageOS Project
+// Copyright (C) 2022 The Portal Project
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -13,8 +13,8 @@
 // limitations under the License.
 
 cc_binary {
-    name: "vendor.lineage.livedisplay@2.0-service-legacymm",
-    init_rc: ["vendor.lineage.livedisplay@2.0-service-legacymm.rc"],
+    name: "vendor.portalrom.livedisplay@2.0-service-legacymm",
+    init_rc: ["vendor.portalrom.livedisplay@2.0-service-legacymm.rc"],
     defaults: ["hidl_defaults"],
     relative_install_path: "hw",
     vendor: true,
@@ -29,6 +29,6 @@ cc_binary {
         "libdl",
         "libhidlbase",
         "libutils",
-        "vendor.lineage.livedisplay@2.0",
+        "vendor.portalrom.livedisplay@2.0",
     ],
 }

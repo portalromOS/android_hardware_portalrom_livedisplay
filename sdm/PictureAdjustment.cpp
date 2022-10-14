@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019-2020 The LineageOS Project
+ * Copyright (C) 2022 The Portal Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,9 +15,9 @@
  */
 
 #ifdef LIVES_IN_SYSTEM
-#define LOG_TAG "lineage.livedisplay@2.0-impl-sdm"
+#define LOG_TAG "portalrom.livedisplay@2.0-impl-sdm"
 #else
-#define LOG_TAG "vendor.lineage.livedisplay@2.0-impl-sdm"
+#define LOG_TAG "vendor.portalrom.livedisplay@2.0-impl-sdm"
 #endif
 
 #include "livedisplay/sdm/PictureAdjustment.h"
@@ -27,7 +27,7 @@
 #include "livedisplay/sdm/Utils.h"
 
 namespace vendor {
-namespace lineage {
+namespace portalrom {
 namespace livedisplay {
 namespace V2_0 {
 namespace sdm {
@@ -82,7 +82,7 @@ void PictureAdjustment::updateDefaultPictureAdjustment() {
     default_pa_ = getPictureAdjustmentInternal();
 }
 
-// Methods from ::vendor::lineage::livedisplay::V2_0::IPictureAdjustment follow.
+// Methods from ::vendor::portalrom::livedisplay::V2_0::IPictureAdjustment follow.
 Return<void> PictureAdjustment::getHueRange(getHueRange_cb _hidl_cb) {
     FloatRange range{};
     HsicRanges r{};
@@ -166,7 +166,7 @@ Return<void> PictureAdjustment::getDefaultPictureAdjustment(
 }
 
 Return<bool> PictureAdjustment::setPictureAdjustment(
-        const ::vendor::lineage::livedisplay::V2_0::HSIC& hsic) {
+        const ::vendor::portalrom::livedisplay::V2_0::HSIC& hsic) {
     HsicConfig config = {0,
                          {static_cast<int32_t>(hsic.hue), hsic.saturation, hsic.intensity,
                           hsic.contrast, hsic.saturationThreshold}};
@@ -177,5 +177,5 @@ Return<bool> PictureAdjustment::setPictureAdjustment(
 }  // namespace sdm
 }  // namespace V2_0
 }  // namespace livedisplay
-}  // namespace lineage
+}  // namespace portalrom
 }  // namespace vendor
