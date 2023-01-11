@@ -40,7 +40,7 @@ cc_library_headers {
 }
 
 cc_defaults {
-    name: "livedisplay_sysfs_defaults",
+    name: "livedisplay_sysfs_defaults_portal",
     defaults: ["hidl_defaults"],
     relative_install_path: "hw",
     srcs: [

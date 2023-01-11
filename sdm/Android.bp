@@ -41,7 +41,7 @@ cc_library_headers {
 }
 
 cc_defaults {
-    name: "livedisplay_sdm_defaults",
+    name: "livedisplay_sdm_defaults_portal",
     defaults: ["hidl_defaults"],
     relative_install_path: "hw",
     srcs: [
